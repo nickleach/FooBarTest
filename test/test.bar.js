@@ -25,7 +25,7 @@ describe("Bar", function(){
   });
   describe("decipher", function(){
     it("should do something to a string", function(){
-      expect(bar.decipher('hello')).eq('\u0004\u0001\b\b\u000b');
+      expect(bar.decipher("ÝÓ")).eq("yo");
     });
   });
   describe("rot13", function(){
