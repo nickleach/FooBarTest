@@ -19,7 +19,20 @@ describe("Bar", function(){
     });
   });
   describe("cipher", function(){
-    it("")
+    it("should return a char code of a string", function(){
+      expect(bar.cipher('yo')).eq("ÝÓ");
+    });
   });
+  describe("decipher", function(){
+    it("should do something to a string", function(){
+      expect(bar.decipher('hello')).eq('\u0004\u0001\b\b\u000b');
+    });
+  });
+  describe("rot13", function(){
+    it("should mess up a sentence", function(){
+      expect(bar.decipher('hi my name is')).eq('\u0004\u0005ﾼ\t\u0015ﾼ\n�\t\u0001ﾼ\u0005\u000f');
+    });
+  });
+
 });
 
